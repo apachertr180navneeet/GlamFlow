@@ -1,0 +1,340 @@
+/*
+ * Custom Color Palette Override
+ * =============================
+ * Primary:   #4e5152 (Dark Slate Graphite)
+ * Accent 1:  #787169 (Warm Taupe / Stone)
+ * Accent 2:  #57585b (Charcoal Grey)
+ * Light/Bg:  #eef0f1 (Platinum Silver Tint)
+ */
+
+/* =============================================
+   ROOT COLOR VARIABLES
+   ============================================= */
+:root {
+	--color-primary: #4e5152;
+	--color-accent: #787169;
+	--color-accent-light: #57585b;
+	--color-light: #eef0f1;
+	
+	--color-primary-rgb: 78, 81, 82;
+	--color-accent-rgb: 120, 113, 105;
+	--color-accent-light-rgb: 87, 88, 91;
+	--color-light-rgb: 238, 240, 241;
+}
+
+/* =============================================
+   SELECTION COLOR
+   ============================================= */
+::selection {
+	background-color: var(--color-accent);
+	color: #ffffff;
+}
+::-moz-selection {
+	background-color: var(--color-accent);
+	color: #ffffff;
+}
+
+/* =============================================
+   PRELOADER
+   ============================================= */
+.preloader_image::after {
+	border-color: var(--color-accent) !important;
+}
+
+/* =============================================
+   LINKS & GENERAL TEXT COLOR OVERRIDES
+   ============================================= */
+a {
+	color: var(--color-primary);
+	transition: color 0.3s ease;
+}
+a:hover,
+a:focus,
+a:active {
+	color: var(--color-accent);
+}
+
+.color-main,
+.color-main2 {
+	color: var(--color-accent) !important;
+}
+
+/* =============================================
+   BUTTONS
+   ============================================= */
+.btn,
+button[type="submit"],
+input[type="submit"] {
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+	color: #ffffff;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active,
+button[type="submit"]:hover,
+input[type="submit"]:hover {
+	background-color: var(--color-accent);
+	border-color: var(--color-accent);
+	color: #ffffff;
+}
+
+.btn.btn-outline,
+.btn-outline-maincolor {
+	color: var(--color-primary);
+	border-color: var(--color-primary);
+	background-color: transparent;
+}
+
+.btn.btn-outline:hover,
+.btn-outline-maincolor:hover {
+	background-color: var(--color-primary);
+	color: #ffffff;
+}
+
+/* =============================================
+   NAVIGATION & HEADER
+   ============================================= */
+.page_header .sf-menu > li > a {
+	color: #333333; /* Dark gray base */
+}
+.page_header .sf-menu > li > a:hover,
+.page_header .sf-menu > li.active > a,
+.page_header .sf-menu > li.current-menu-item > a {
+	color: var(--color-accent) !important;
+}
+.sf-menu ul li > a:hover,
+.sf-menu ul li.active > a {
+	color: var(--color-accent) !important;
+}
+.toggle_menu span,
+.toggle_menu span::before,
+.toggle_menu span::after {
+	background-color: var(--color-primary);
+}
+
+/* =============================================
+   TOP BAR
+   ============================================= */
+.page_topline.ms {
+	background-color: var(--color-primary);
+	color: #ffffff;
+}
+
+/* =============================================
+   FOOTER & COPYRIGHT
+   ============================================= */
+.page_footer a:hover {
+	color: var(--color-accent) !important;
+}
+.page_copyright {
+	background-color: var(--color-light);
+	color: var(--color-primary);
+}
+.widget_social_buttons a.border-icon:hover {
+	color: var(--color-accent) !important;
+	border-color: var(--color-accent) !important;
+}
+.widget_mailchimp .search-submit {
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+}
+.widget_mailchimp .search-submit:hover {
+	background-color: var(--color-accent);
+	border-color: var(--color-accent);
+}
+.widget_mailchimp .form-control:focus {
+	border-color: var(--color-primary);
+}
+
+/* =============================================
+   SUB-TITLE / SPECIAL HEADING
+   ============================================= */
+.sub-title {
+	color: var(--color-accent);
+	font-weight: 600;
+}
+.special-heading::after,
+.special-heading::before {
+	background-color: var(--color-accent);
+}
+
+/* =============================================
+   ICON BOXES
+   ============================================= */
+.icon-box .icon-styled {
+	color: var(--color-accent);
+}
+.icon-box:hover .icon-styled {
+	color: var(--color-primary);
+}
+.icon-box .icon-styled.bg-maincolor {
+	background-color: var(--color-accent);
+	color: #ffffff;
+}
+
+/* =============================================
+   COLOR SECTION (.cs) OVERRIDES
+   ============================================= */
+.cs {
+	background-color: var(--color-primary);
+	color: #ffffff;
+}
+.cs.cs-secondary {
+	background-color: var(--color-accent);
+	color: #ffffff;
+}
+
+/* =============================================
+   BACKGROUND UTILITY CLASSES
+   ============================================= */
+.bg-maincolor {
+	background-color: var(--color-primary) !important;
+}
+.bg-maincolor2 {
+	background-color: var(--color-accent) !important;
+}
+.bg-maincolor3 {
+	background-color: var(--color-accent-light) !important;
+}
+
+/* =============================================
+   MUTED SECTION BACKGROUNDS
+   ============================================= */
+.ls.ms {
+	background-color: #faf9f6; /* Keep main light sections very clean off-white */
+}
+.ls.ms.bg-cream {
+	background-color: var(--color-light); /* Use cream as a specific modifier */
+}
+
+/* =============================================
+   BORDER ACCENTS
+   ============================================= */
+.border-maincolor {
+	border-color: var(--color-accent) !important;
+}
+.bordered:hover,
+.border-icon:hover {
+	border-color: var(--color-accent);
+}
+
+/* =============================================
+   PRICING TABLES
+   ============================================= */
+.price_table.featured {
+	border-color: var(--color-accent);
+}
+.price_table .plan-price {
+	color: var(--color-accent);
+}
+.price_table.featured .plan-name {
+	background-color: var(--color-primary);
+}
+
+/* =============================================
+   FORM ELEMENTS
+   ============================================= */
+.form-control:focus,
+input:focus,
+textarea:focus,
+select:focus {
+	border-color: var(--color-primary) !important;
+}
+
+/* =============================================
+   OWL CAROUSEL
+   ============================================= */
+.owl-carousel .owl-dot.active span,
+.owl-carousel .owl-dot:hover span {
+	background-color: var(--color-accent);
+	border-color: var(--color-accent);
+}
+.owl-carousel .owl-nav button:hover {
+	color: var(--color-accent) !important;
+}
+
+/* =============================================
+   GALLERY / LIGHTBOX
+   ============================================= */
+.gallery-item:hover .gallery-content {
+	background-color: rgba(118, 127, 158, 0.9); /* Primary color overlay */
+}
+
+/* =============================================
+   SCROLLBAR (WEBKIT)
+   ============================================= */
+::-webkit-scrollbar-thumb {
+	background-color: var(--color-primary);
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-accent);
+}
+
+/* =============================================
+   BLOCKQUOTE ACCENT
+   ============================================= */
+blockquote {
+	border-left-color: var(--color-accent);
+}
+
+/* =============================================
+   PAGINATION
+   ============================================= */
+.pagination .page-item.active .page-link,
+.pagination .page-item .page-link:hover {
+	background-color: var(--color-primary);
+	border-color: var(--color-primary);
+}
+
+/* =============================================
+   TEAM MEMBERS
+   ============================================= */
+.team-member:hover .team-social a {
+	color: var(--color-accent);
+}
+
+/* =============================================
+   PROGRESS BARS
+   ============================================= */
+.progress-bar {
+	background-color: var(--color-accent);
+}
+
+/* =============================================
+   TABS & ACCORDION
+   ============================================= */
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link:hover {
+	border-color: var(--color-primary);
+	color: var(--color-primary);
+}
+.card-header a:not(.collapsed) {
+	color: var(--color-primary);
+}
+
+/* =============================================
+   BREADCRUMBS
+   ============================================= */
+.breadcrumb a:hover {
+	color: var(--color-accent);
+}
+
+/* =============================================
+   COUNTERS / NUMBER CARDS
+   ============================================= */
+.counter_number,
+.number-card .number {
+	color: var(--color-accent);
+}
+
+/* =============================================
+   RESPONSIVE MOBILE MENU
+   ============================================= */
+@media (max-width: 991px) {
+	.sf-menu a:hover,
+	.sf-menu .active > a {
+		color: var(--color-accent) !important;
+	}
+}
