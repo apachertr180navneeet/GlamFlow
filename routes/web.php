@@ -37,11 +37,6 @@ use App\Http\Controllers\Admin\LaundryOrderController;
 
 Route::get('/', [HomeController::class, 'index'])->name('/');
 Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/about', [HomeController::class, 'about'])->name('about');
-Route::get('/services', [HomeController::class, 'services'])->name('services');
-Route::get('/gallery', [HomeController::class, 'gallery'])->name('gallery');
-Route::get('/contact', [HomeController::class, 'contact'])->name('contact');
-Route::post('/contact', [HomeController::class, 'submitContact'])->name('contact.submit');
 
 Route::name('admin.')->prefix('admin')->group(function () {
     Route::get('/', [AdminAuthController::class, 'index']);
